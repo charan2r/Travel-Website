@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="Todo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+<body background="2.jpg">
+    <div id="app" class="container">
+        <div class="header">
+            <h1>Todo List</h1>
+        </div>
+
+        <div class="input-group" v-if="!isEditing">
+            <input type="text" v-model="todo" placeholder="Enter a new todo">
+            <input type="submit" value="Add" @click="storeTodo" class="button">
+        </div>
+        <div class="input-group" v-else>
+            <input type="text" v-model="todo" placeholder="Update your todo">
+            <input type="submit" value="Update" @click="updateTodo" class="button">
+        </div>
+
+        <ol>
+            <li v-for="(todo, index) in todos" :key="index" class="todo-item">
+                {{ todo }}
+                <button @click="editTodo(index, todo)" class="button-edit">Edit</button>
+                <button @click="removeTodo(index)" class="button-delete">Delete</button>
+            </li>
+        </ol>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script>
+        var vue_det = new Vue({
+            el: '#app',
+            
+            data: {
+                isEditing: false,
+                todo: '',
+                todos: [],
+                selectedTodo: null,
+                selectedIndex: null
+            },
+            
+            methods: {
+                storeTodo() {
+                    if (this.todo.trim()) {
+                        this.todos.push(this.todo.trim());
+                        this.todo = '';
+                    }
+                },
+
+                removeTodo(index) {
+                    this.todos.splice(index, 1);
+                },
+
+                updateTodo() {
+                    if (this.todo.trim()) {
+                        this.todos.splice(this.selectedIndex, 1, this.todo.trim());
+                        this.todo = '';
+                        this.isEditing = false;
+                        this.selectedIndex = null;
+                    }
+                },
+
+                editTodo(index, todo) {
+                    this.isEditing = true;
+                    this.todo = todo;
+                    this.selectedIndex = index;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

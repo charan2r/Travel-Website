@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Pearl of the Indian Ocean</title>
+      <link rel="stylesheet" href="Home.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body background="2.jpg">
+      <nav>
+         <div class="menu-icon">
+            <span class="fa fa-bars"></span>
+         </div>
+         <div class="logo">
+            Pearl of the Indian Ocean
+         </div>
+         <div class="nav-items">
+            <li><a href="Home.html"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="About.html"><i class="fa fa-user"></i>About Us</a></li>
+            <li><a href="Tourist.html"><i class="fa fa-info"></i>Tourist Information</a></li>
+            <li><a href="Contact.html"><i class="fa fa-phone"></i>Contact Us</a></li>
+            <li><a href="Todo.html"><i class="fa fa-list-alt"></i>ToDo List</a></li>
+         </div>
+         <div class="search-icon">
+            <span class="fa fa-search"></span>
+         </div>
+         <div class="cancel-icon">
+            <span class="fa fa-times"></span>
+         </div>
+         <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fa fa-search"></button>
+         </form>
+      </nav>
+      <br><br><br><br><br>
+      <h2>Welcome to Our Tourist Webpage</h2>
+      <br><br><br><br><br><br>
+      <p><b>Sri Lanka</b> is a island country lying in the Indian Ocean and separated from peninsular India by the Palk Strait. It is located between latitudes 5°55′ and 9°51′ N and longitudes 79°41′ and 81°53′ E and has a maximum length of 268 miles and a maximum width of 139 miles. <br><br>
+         The distinctive civilization of Sri Lanka, with roots that can be traced back to the 6th century BCE, is characterized by two factors: the preservation of Theravada Buddhism (the orthodox school of Buddhism having its literary traditions in the Pali language) and the development over two millennia of a sophisticated system of irrigation in the drier parts of the country.
+         This civilization was further enriched by the influences of Hinduism and Islam. <br><br>Sri Lanka is full of natural wonders and many beautiful places, such as
+         Sinharaja Rain Forset , Beautiful Sandy Beaches, Tooth Relic of Kandy, Historical and Religious places etc.</p>
+      <script>
+         const menuBtn = document.querySelector(".menu-icon span");
+         const searchBtn = document.querySelector(".search-icon");
+         const cancelBtn = document.querySelector(".cancel-icon");
+         const items = document.querySelector(".nav-items");
+         const form = document.querySelector("form");
+         menuBtn.onclick = ()=>{
+           items.classList.add("active");
+           menuBtn.classList.add("hide");
+           searchBtn.classList.add("hide");
+           cancelBtn.classList.add("show");
+         }
+         cancelBtn.onclick = ()=>{
+           items.classList.remove("active");
+           menuBtn.classList.remove("hide");
+           searchBtn.classList.remove("hide");
+           cancelBtn.classList.remove("show");
+           form.classList.remove("active");
+           cancelBtn.style.color = "#ff3d00";
+         }
+         searchBtn.onclick = ()=>{
+           form.classList.add("active");
+           searchBtn.classList.add("hide");
+           cancelBtn.classList.add("show");
+         }
+      </script>
+      <br><br><br><br><br><br><br>
+      <footer>
+         <div class="footer-content">
+            <h3>Pearl of the Indian Ocean</h3>
+            <ul class="socials">
+               <li><a href=" https://Facebook.com/"><i class="fa fa-facebook"></i></a></li>
+               <li><a href=" https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+               <li><a href=" https://instagram.com/"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+         </div>
+         <div class="footer-bottom">
+            <p>copyright &copy;2021 </p>
+         </div>
+      </footer>
+   </body>
+</html>
