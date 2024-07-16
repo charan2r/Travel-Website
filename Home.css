@@ -43,7 +43,7 @@
     height: 40px;
     padding: 2px;
     background: #1e232b;
-    min-width: 18%!important;
+    min-width: 5%!important;
     border-radius: 2px;
     border: 1px solid rgba(155,155,155,0.2);
   }
@@ -93,7 +93,7 @@
     font-style: normal;
 }
   p{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: cursive;
     font-style: normal;
     color: rgb(26, 23, 23);
     font-size: 25px;
