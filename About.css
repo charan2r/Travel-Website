@@ -5,7 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Global Styles */
 body {
     min-height: 100vh;
     display: flex;
@@ -20,93 +19,76 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     padding: 15px 50px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.logo {
-    font-size: 24px;
+  }
+  
+  .logo {
+    font-size: 22px;
     font-weight: bold;
     color: white;
-    
-    letter-spacing: 2px;
-}
-
-.nav-items {
+  }
+  
+  .nav-items {
     list-style: none;
     display: flex;
-}
-
-.nav-items li {
-    margin: 0 20px;
-}
-
-.nav-items li a {
+  }
+  
+  .nav-items li {
+    margin: 0 15px;
+  }
+  
+  .nav-items li a {
     text-decoration: none;
     color: white;
     font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-}
-
-.nav-items li a i {
-    margin-right: 8px;
-}
-
-.nav-items li a:hover {
+    transition: 0.3s ease-in-out;
+  }
+  .nav-items li a i {
+    margin-right: 5px;
+  }
+  
+  .nav-items li a:hover {
     color: #ffcc00;
-    transform: scale(1.1);
-}
+  }
+  
+  .menu-icon, .search-icon, .cancel-icon {
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .search-icon {
+    gap: 10px;
+  }
 
-/* Hero Section */
+
+/* About Section */
 .about-section {
-    background: url('4.jpg') no-repeat left;
-    background-size: 55%;
-    background-color: #3f6b6b;
-    padding: 100px 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.inner-container {
-    width: 50%;
-    background: white;
-    padding: 60px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.inner-container h1 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    font-weight: 700;
-    color: #333;
-    text-transform: uppercase;
+    background: url('images/4.jpg') no-repeat center;
+    padding: 50px;
     text-align: center;
 }
 
-.text {
-    font-size: 15px;
-    color: #444;
-    line-height: 1.8;
-    text-align: justify;
+.inner-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.inner-container h1 {
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
-p.text {
-    font-family: 'Times New Roman', Times, serif;
+.text {
     font-size: 18px;
-    font-style: normal;
-    color: #ff7f50;
-    font-weight: 500;
+    line-height: 1.6;
+    color: #333;
 }
 
 /* Buttons */
