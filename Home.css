@@ -59,11 +59,10 @@ nav {
   display: none;
 }
 
-.search-icon {
-  gap: 10px;
+#search{
+  margin-left: 5px;
 }
 
-/* Search Bar */
 form {
   display: flex;
   align-items: center;
